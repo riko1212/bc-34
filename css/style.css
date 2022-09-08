@@ -4,10 +4,55 @@
   --accent-color: #ff6c00;
   --first-btn-color: #ffffff;
   --second-btn-color: #303030;
+  --typical-margin: 20px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .list {
@@ -16,6 +61,18 @@ body {
 
 .link {
   text-decoration: none;
+}
+b {
+  display: inline-block;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
 }
 
 .title {
@@ -33,12 +90,33 @@ body {
   line-height: 1.36;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /*------------------------ HEADER -------------------------*/
 
 .header {
   background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 131px;
 }
 
 .header-link {
@@ -46,12 +124,21 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.458);
+  color: #ffffff;
 }
 
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
+.header-connect {
+  margin-left: auto;
 }
 
 .header-tel {
@@ -64,14 +151,18 @@ body {
 
 .header-btn {
   color: #ffffff;
+  margin-left: 40px;
 }
 
 /*------------------------ HERO -------------------------*/
 
-.hero {
-  background-color: #8c8888;
+.hero > .container {
+  display: flex;
 }
 
+.hero-list {
+  width: 100px;
+}
 .hero-link {
   font-weight: 600;
   font-size: 11px;
@@ -80,12 +171,19 @@ body {
   color: #303030;
 }
 
+.hero-content {
+  padding: 272px 100px 208px 100px;
+  background-color: #8c8888;
+  flex-grow: 1;
+}
+
 .hero-pre-title {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
 }
 
 .hero-title {
@@ -95,6 +193,7 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--first-title-color);
+  margin-bottom: var(--typical-margin);
 }
 
 .hero-after-title {
@@ -102,9 +201,24 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  max-width: 360px;
 }
 
 /*------------------------ ABOUT -------------------------*/
+
+.about > .container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-content {
+  max-width: 470px;
+}
 
 .about-pre-title {
   font-weight: 600;
@@ -112,21 +226,25 @@ body {
   line-height: 1.36;
   text-transform: uppercase;
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: var(--typical-margin);
 }
 .about-after-title {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: var(--typical-margin);
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 42px;
 }
 .about-btn {
   color: var(--second-btn-color);
@@ -143,9 +261,32 @@ body {
   line-height: 1.36;
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
 }
 .prices-title {
   color: var(--first-title-color);
+  margin-bottom: 44px;
+}
+
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
+}
+
+.prices-item {
+  margin-bottom: var(--typical-margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-item-text {
@@ -157,15 +298,52 @@ body {
 
 .prices-btn {
   color: var(--first-btn-color);
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
 }
 
 /*------------------------ BENEFITS -------------------------*/
+
+.benefits > .container {
+  display: flex;
+  padding-left: 100px;
+  gap: 130px;
+}
+
+.benefits-wrap {
+  max-width: 500px;
+  padding-top: 9px;
+}
+
+.benefits-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+/* .benefits-item:nth-child(odd) {
+  margin-right: 30px;
+} */
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
 
 .benefits-item span {
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
-  text-align: center;
+
   letter-spacing: 0.05em;
   color: #303030;
 }
@@ -173,7 +351,7 @@ body {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
-  text-align: center;
+
   color: #303030;
 }
 .benefits-pre-title {
@@ -183,9 +361,11 @@ body {
   text-transform: uppercase;
 
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 .benefits-title {
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 .benefits-after-title {
   font-weight: 400;
@@ -193,4 +373,173 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+}
+
+.barbers-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.barbers-item {
+  width: calc((100% - 90px) / 3);
+  margin-left: 30px;
+}
+
+/*------------------------ BARBERS -------------------------*/
+
+.barbers-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+
+  color: #303030;
+  margin-bottom: var(--typical-margin);
+}
+
+.barbers-title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.barbers-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+  margin-top: 30px;
+}
+.barbers-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #ff6c00;
+}
+
+/*------------------------ GALLERY -------------------------*/
+
+.gallery-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+
+  color: #303030;
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
+}
+
+.contact-wrap > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*------------------------ ONLINE -------------------------*/
+.online {
+  background-color: #303030;
+  width: calc((100% - 30px) / 2);
+}
+
+.online-title {
+  color: var(--first-title-color);
+}
+
+/*------------------------ CONTACTS -------------------------*/
+.contacts {
+  background-color: #303030;
+  width: calc((100% - 30px) / 2);
+  padding-left: 100px;
+}
+
+.contacts-title {
+  color: var(--first-title-color);
+  margin-bottom: 40px;
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+}
+.contacts-address-link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+.contacts-item {
+  margin-bottom: var(--typical-margin);
+}
+
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+.contacts-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin-bottom: var(--typical-margin);
+}
+.contacts-schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/*------------------------ FOOTER -------------------------*/
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #9da4bd;
+}
+.footer-list {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
 }
