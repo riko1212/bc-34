@@ -18,13 +18,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a href="" class="header-logo">
-          <img src="./img/logo.svg" alt="site logo" />
+        <a href="" class="header-logo animate__animated animate__swing">
+          <img src="./img/logo.svg" alt="site logo " />
         </a>
         <nav class="header-navigation">
           <ul class="header-list list">
@@ -46,36 +51,41 @@
           <a class="header-tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="header-btn btn" type="button">Online-booking</button>
+          <button class="header-btn btn" data-modal-open type="button">
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+
           <div class="hero-content">
             <p class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title">BarberShop</h1>
+            <h1 class="hero-title" data-aos="fade-right">BarberShop</h1>
             <p class="hero-after-title">
               We are experts in trendy men’s haircuts. We work quickly,
               carefully and with style.
@@ -111,7 +121,9 @@
           </ul>
           <div class="about-content">
             <p class="about-pre-title pre-title">About</p>
-            <h2 class="about-title title">Best Barbershop in your city</h2>
+            <h2 class="about-title title" data-aos="flip-right">
+              Best Barbershop in your city
+            </h2>
             <p class="about-after-title">
               If you want to add more confidence to your image, you should
               definitely visit us.
@@ -132,7 +144,9 @@
           <p class="prices-pre-title pre-title">
             Spend your time with the best masters
           </p>
-          <h2 class="prices-title title">Services and prices</h2>
+          <h2 class="prices-title title" data-aos="zoom-in-up">
+            Services and prices
+          </h2>
           <div class="prices-wrap">
             <ul class="prices-list list">
               <li class="prices-item">
@@ -213,12 +227,26 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-1.jpeg"
-                alt="haircut"
-                width="370"
-                height="346"
-              />
+              <div class="barbers-top-wrap">
+                <img
+                  src="./img/barbers-img-1.jpeg"
+                  alt="haircut"
+                  width="370"
+                  height="346"
+                />
+
+                <p class="barbers-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Adipisci consectetur possimus reiciendis vel vitae,
+                  accusantium quia dicta unde, aperiam mollitia tempora sed
+                  rerum porro inventore voluptatum itaque esse autem ad! Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+                  consectetur possimus reiciendis vel vitae, accusantium quia
+                  dicta unde, aperiam mollitia tempora sed rerum porro inventore
+                  voluptatum itaque esse autem ad!
+                </p>
+              </div>
+
               <h3 class="barbers-item-title">John Smith</h3>
               <p class="barbers-item-text">Extreme Barber</p>
               <ul class="barbers-soc-list list">
@@ -403,5 +431,15 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
