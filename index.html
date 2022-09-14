@@ -431,9 +431,104 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>X</button>
+        <p class="modal-title">Заголовок модального вікна</p>
+
+        <form class="modal-form">
+          <div class="modal-field">
+            <label class="modal-label" for="user-name">Введіть імя </label>
+            <div class="input-wrap">
+              <input
+                type="text"
+                name="user-name"
+                class="modal-input"
+                placeholder="Микола"
+                required
+                minlength="2"
+                id="user-name"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-email" class="modal-label">Введіть пошту</label>
+            <input
+              type="email"
+              name="user-email"
+              class="modal-input"
+              placeholder="test@mail.com"
+              id="user-email"
+            />
+          </div>
+
+          <input
+            type="tel"
+            name="user-tel"
+            class="modal-input"
+            placeholder="+380 (96) 111-11-11"
+            required
+          />
+          <div class="modal-field">
+            <label for="user-text" class="modal-label">Введіть коментар</label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              class="modal-text"
+              placeholder="Комент"
+            ></textarea>
+          </div>
+
+          <input
+            type="checkbox"
+            name="privacy"
+            id="privacy"
+            class="modal-check visually-hidden"
+            value="true"
+          />
+          <label for="privacy" class="check-text">
+            <!-- <span>
+              <svg class="check-icon" width="16" height="15">
+                <use href="./img/icons.svg#icon-che"></use>
+              </svg>
+            </span> -->
+            Важлива політика користування</label
+          >
+
+          <div>
+            <input
+              type="checkbox"
+              id="one"
+              name="filters"
+              value="one"
+              class="filter-check visually-hidden"
+            />
+            <label for="one" class="filter-btn">Всі</label>
+
+            <input
+              type="checkbox"
+              id="two"
+              name="filters"
+              value="two"
+              class="filter-check visually-hidden"
+            />
+            <label for="two" class="filter-btn">Дизайн</label>
+
+            <input
+              type="checkbox"
+              id="three"
+              name="filters"
+              value="three"
+              class="filter-check visually-hidden"
+            />
+            <label for="three" class="filter-btn">Додатки</label>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
