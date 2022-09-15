@@ -1,0 +1,50 @@
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: absolute;
+  width: 100%;
+  padding-right: 20px;
+  > .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  margin-right: 131px;
+}
+
+.navigation__link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  transition: color 300ms linear;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.navigation__list {
+  display: flex;
+  gap: 30px;
+}
+
+.header__connect {
+  margin-left: auto;
+}
+
+.connect__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.connect__btn {
+  color: #ffffff;
+  margin-left: 40px;
+}

@@ -23,35 +23,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a href="" class="header-logo animate__animated animate__swing">
+        <a href="" class="logo header__logo animate__animated animate__swing">
           <img src="./img/logo.svg" alt="site logo " />
         </a>
-        <nav class="header-navigation">
-          <ul class="header-list list">
-            <li class="header-item">
-              <a class="header-link link" href="">About</a>
+        <nav class="navigation">
+          <ul class="navigation__list list">
+            <li class="navigation__item">
+              <a class="navigation__link link" href="">About</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link test" href="">Services and prices</a>
+            <li class="navigation__item">
+              <a class="navigation__link link test" href=""
+                >Services and prices</a
+              >
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="#barbers">Barbers</a>
+            <li class="navigation__item">
+              <a class="navigation__link link" href="#barbers">Barbers</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="">Contacts</a>
+            <li class="navigation__item">
+              <a class="navigation__link link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a class="header-tel link" href="tel:+380441111111"
+        <div class="connect header__connect">
+          <a class="connect__tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="header-btn btn" data-modal-open type="button">
+          <button class="connect__btn btn" data-modal-open type="button">
             Online-booking
           </button>
         </div>
@@ -431,7 +433,7 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>X</button>
         <p class="modal-title">Заголовок модального вікна</p>

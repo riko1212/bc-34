@@ -1,0 +1,48 @@
+.contacts {
+  width: calc((100% - 30px) / 2);
+  padding-left: 100px;
+}
+
+.contacts-title {
+  color: var(--first-title-color);
+  margin-bottom: 40px;
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+}
+
+.contacts-address-link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-item {
+  margin-bottom: var(--typical-margin);
+}
+
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: var(--typical-margin);
+}
+
+.contacts-schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
