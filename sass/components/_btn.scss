@@ -17,3 +17,11 @@
     color: #ffffff;
   }
 }
+
+.btn--color-dark {
+  color: var(--second-btn-color);
+}
+
+.btn--color-light {
+  color: var(--first-btn-color);
+}

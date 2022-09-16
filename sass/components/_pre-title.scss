@@ -1,7 +1,8 @@
 .pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  @include font(600, 11, var(--lh), 0.1);
+  // font-weight: 600;
+  // font-size: 11px;
+  // line-height: 1.36;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -12,4 +13,12 @@
     height: 1px;
     background-color: currentColor;
   }
+}
+
+.pre-title--color-dark {
+  color: #303030;
+}
+
+.pre-title--color-light {
+  color: rgba(157, 164, 189, 0.6);
 }
