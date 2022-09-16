@@ -99,3 +99,19 @@
 .barbers-soc-link:focus .barbers-soc-icon {
   fill: coral;
 } */
+
+.barbers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.barbers-item {
+  width: 100%;
+  @media screen and(min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and(min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
+}
