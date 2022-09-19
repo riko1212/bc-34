@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <a href="" class="logo header__logo animate__animated animate__swing">
           <img src="./img/logo.svg" alt="site logo " />
@@ -34,10 +34,10 @@
         <nav class="navigation">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a class="navigation__link link" href="">About</a>
+              <a class="navigation__link link" href="#about">About</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link test" href=""
+              <a class="navigation__link link test" href="#prices"
                 >Services and prices</a
               >
             </li>
@@ -45,7 +45,7 @@
               <a class="navigation__link link" href="#barbers">Barbers</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link" href="">Contacts</a>
+              <a class="navigation__link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -57,10 +57,69 @@
             Online-booking
           </button>
         </div>
+        <button type="button" class="menu-open">O</button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close">X</button>
+            <nav>
+              <ul class="mob-menu-list list">
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">About</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">Services and prices</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="#barbers" class="mob-menu-link link">Barbers</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-menu-connect">
+              <a class="mob-menu-tel link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button
+                class="btn btn--color-dark mob-menu-btn"
+                data-modal-open
+                type="button"
+              >
+                Online-booking
+              </button>
+            </div>
+
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-item">
+                <a
+                  class="mob-soc-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-item">
+                <a
+                  class="mob-soc-link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero__container">
           <div class="soc">
             <ul class="soc__list list">
@@ -100,7 +159,7 @@
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="about section">
         <div class="container">
           <ul class="pic-list list">
@@ -317,8 +376,68 @@
           <h2 class="visually-hidden">gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery-img-1.jpeg    1x,
+                    ./img/gallery-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-tab.jpeg    1x,
+                    ./img/gallery-img-1-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-mob.jpeg    1x,
+                    ./img/gallery-img-1-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/gallery-img-1.jpeg" alt="haircut" width="418" />
+              </picture>
+            </li>
+            <li class="gallery-item">
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery-img-2.jpeg    1x,
+                    ./img/gallery-img-2-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-2-tab.jpeg    1x,
+                    ./img/gallery-img-2-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-2-mob.jpeg    1x,
+                    ./img/gallery-img-2-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  srcset="
+                    ./img/gallery-img-2.jpeg    1x,
+                    ./img/gallery-img-2-2x.jpeg 2x
+                  "
+                  src="./img/gallery-img-2.jpeg"
+                  alt="haircut"
+                  width="418"
+                />
+              </picture>
+            </li>
+            <li class="gallery-item">
               <img
-                src="./img/gallery-img-1.jpeg"
+                src="./img/gallery-img-3.jpeg"
                 alt="haircut"
                 width="270"
                 height="360"
@@ -326,29 +445,12 @@
             </li>
             <li class="gallery-item">
               <img
-                src="./img/gallery-img-1.jpeg"
+                src="./img/gallery-img-4.jpeg"
                 alt="haircut"
                 width="270"
                 height="360"
               />
             </li>
-            <li class="gallery-item">
-              <img
-                src="./img/gallery-img-1.jpeg"
-                alt="haircut"
-                width="270"
-                height="360"
-              />
-            </li>
-            <li class="gallery-item">
-              <img
-                src="./img/gallery-img-1.jpeg"
-                alt="haircut"
-                width="270"
-                height="360"
-              />
-            </li>
-            
           </ul>
         </div>
       </section>
@@ -509,6 +611,8 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
